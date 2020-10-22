@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div>
+        <h1>Get a dog picture!</h1>
+        <form>
+            <input type="submit" value="Fetch!">
+            <input type="text" name="breed" placeholder="Dog Breed" required>
+        </form>
+        <section class="results hidden">
+            <h2>Look at this puppy!</h2>
+                <div id="target">
+                </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
