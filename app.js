@@ -23,7 +23,7 @@ function onSubmit() {
 }
 
 function displayImages(responseJson) {
-    $('#target').replaceWith(`<img src="${responseJson.message[0]}" class="results-img">`);
+    $('#target').replaceWith(`<img src="${responseJson.message}" class="results-img">`);
     $('.results').removeClass('hidden');
 };
 
