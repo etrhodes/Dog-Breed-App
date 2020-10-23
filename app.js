@@ -2,15 +2,17 @@ function getDogImage(breed) {
     fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
         .then(response => {
             if (!response.ok) {
-                console.error(response.message)
+                return response.json().then(e => 
+                    Promise.reject(e))
             } else {
-            response.json()
+                return response.json()
+            }
         }
-    })
+        )
         .then(responseJson =>
             displayImages(responseJson)
         )
-        .catch(error => alert('Something went wrong. Try again later')
+        .catch(error => alert('Sorry, we could not find that dog breed')
         );
 }
 
@@ -23,7 +25,7 @@ function onSubmit() {
 }
 
 function displayImages(responseJson) {
-    $('#target').replaceWith(`<img src="${responseJson.message}" class="results-img">`);
+    $('.target').replaceWith(`<img src="${responseJson.message}" class="target">`);
     $('.results').removeClass('hidden');
 };
 
