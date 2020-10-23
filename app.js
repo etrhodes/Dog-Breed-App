@@ -1,8 +1,7 @@
 function getDogImage(breed) {
     fetch(`https://dog.ceo/api/breed/${breed}/images`)
         .then(response => response.json())
-        .then(responseJson => 
-            displayImages(responseJson))
+        .then(responseJson => displayImages(responseJson))
         .catch(error => alert('Something went wrong. Try again later'));
 }
 
