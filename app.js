@@ -1,5 +1,5 @@
 function getDogImage(breed) {
-    fetch(`https://dog.ceo/api/breed/${breed}/images`)
+    fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
         .then(response => {
             if (!response.ok) {
                 console.error(response.message)
